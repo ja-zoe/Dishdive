@@ -1,0 +1,92 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 60%;
+    border-radius: 5px;
+    gap: 5%;
+    margin-bottom: 10%;
+}
+
+.signUp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    color: white;
+    font-size: 4rem;
+    width: fit-content;
+    height: fit-content;
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 10%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    height: 100%;
+    border: 1px solid green;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: ;
+}
+
+.span {
+    color: white;
+    font-family: "Yantramanav", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.25rem;
+    margin-bottom: 5%;
+}
+
+.input {
+    background-color: black;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 5vh;
+}
+
+.input:focus {
+    outline: none;
+    
+}
+
+.signUpButton {
+    background-color: rgb(202, 143, 66);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 2.25rem;
+    width: 25%;
+    height: 15%;
+    font-family: "Yantramanav", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.signUpButton:hover {
+    cursor: pointer;
+}
+
+.passwordLabel {
+    margin-bottom: 5%;
+}
