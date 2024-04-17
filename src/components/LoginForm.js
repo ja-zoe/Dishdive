@@ -8,7 +8,7 @@ const LoginForm = () => {
         <div className={styles.container}>
             <div className={styles.Login}>
 
-                <h1 className={styles.texting}> Login </h1>
+                <h1 className={styles.texting}> Welcome Back! </h1>
 
                 <form className={styles.form}>
                     <label className={styles.label}>
@@ -20,7 +20,7 @@ const LoginForm = () => {
                         <input type='password' name='password' className={styles.input}></input>
                     </label>
                     <Link to='/sign-up' className={styles.accountAlready}> Need an Account? </Link>
-                    <button className={styles.signInButton}> Sign In </button>
+                    <button className={styles.signInButton}> Login </button>
                 </form>
             </div>
         </div>
