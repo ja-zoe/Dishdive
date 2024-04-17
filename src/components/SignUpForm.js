@@ -1,6 +1,7 @@
 import React from "react";
 import styles from '../styles/SignUpForm.module.css'
 import classNames from "classnames";
+import { Link } from "react-router-dom";
 
 const SignUpForm = () => {
     return (
@@ -20,6 +21,7 @@ const SignUpForm = () => {
                         <span className={styles.span}> Password </span>
                         <input type='password' name='password' className={styles.input}></input>
                     </label>
+                    <Link to='/login' className={styles.accountAlready}> Already Have an Account? </Link>
                     <button className={styles.signUpButton}> Sign Up </button>
                 </form>
             </div>

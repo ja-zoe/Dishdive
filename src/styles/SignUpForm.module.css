@@ -35,15 +35,13 @@
     justify-content: center;
     gap: 10%;
     height: 100%;
-    border: 1px solid green;
 }
 
 .label {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
-    height: ;
+    width: 60%;
 }
 
 .span {
@@ -52,7 +50,6 @@
     font-weight: 400;
     font-style: normal;
     font-size: 1.25rem;
-    margin-bottom: 5%;
 }
 
 .input {
@@ -63,6 +60,7 @@
     text-align: center;
     width: 100%;
     height: 5vh;
+    font-size: 1.5rem;
 }
 
 .input:focus {
@@ -88,5 +86,10 @@
 }
 
 .passwordLabel {
-    margin-bottom: 5%;
+    margin-bottom: 0%;
+}
+
+.accountAlready {
+    font-size: 1rem;
+    color: white;
 }
