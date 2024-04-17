@@ -99,23 +99,7 @@
     flex-direction: row;
     align-items: center;
     padding-left: 4%;
-    gap: 5%;
+    gap: 6%;
     width: 100%;
 }
 
-.goBack {
-    text-decoration: none;
-    color: white;
-    background-color: rgb(202, 143, 66);
-    font-family: "Yantramanav", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    margin-right: 10%;
-    width: 12%;
-    height: 22%;
-    font-size: 1.25rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 40px;
-}
