@@ -20,7 +20,7 @@ function Navbar(){
                         </Link>
                     </div>
                     <div className={styles.rightSide}>
-                        <Link to='/' className={styles.goBack}> Go Back </Link>
+                       
                     </div>
             </div>
         )
