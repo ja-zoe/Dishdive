@@ -4,22 +4,20 @@
     align-items: center;
     justify-content: center;
     width: 50%;
-    height: 80%;
+    height: 70%;
     border-radius: 5px;
-    gap: 5%;
 }
 
-.signUp {
+.Login {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
-    margin-top: 10%;
 }
 
-.text {
+.texting {
     color: white;
     font-size: 4rem;
     width: fit-content;
@@ -27,7 +25,6 @@
     font-family: "Concert One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    margin-bottom: 5%;
 }
 
 .form {
@@ -36,7 +33,7 @@
     align-items: center;
     justify-content: center;
     gap: 10%;
-    height: 100%;
+    height: 70%;
     width: 100%;
 }
 
@@ -68,23 +65,31 @@
 
 .input:focus {
     outline: none;
+    
 }
 
-.signUpButton {
+.signInButton {
     background-color: rgb(202, 143, 66);
     border: none;
     border-radius: 30px;
     color: white;
     font-size: 2.25rem;
     width: 18%;
-    height: 10%;
+    height: 12%;
     font-family: "Yantramanav", sans-serif;
     font-weight: 400;
     font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .signUpButton:hover {
     cursor: pointer;
+}
+
+.passwordLabel {
+    margin-bottom: 0%;
 }
 
 .accountAlready {
