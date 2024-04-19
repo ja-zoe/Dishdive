@@ -15,15 +15,15 @@ const SignUpForm = () => {
                 <form className={styles.form}>
                     <label className={styles.label}>
                         <span className={styles.span}> Username </span>
-                        <input type='text' name='username' className={styles.input} onChange={(e) => {setUsername(e.target.value)}}></input>
+                        <input type='text' name='username' className={styles.input}></input>
                     </label>
                     <label className={styles.label}>
                         <span className={styles.span}> Email </span>
-                        <input type='email' name='email' className={styles.input} onChange={(e) => {setEmail(e.target.value)}}></input>
+                        <input type='email' name='email' className={styles.input}></input>
                     </label>
                     <label className={classNames(styles.label, styles.passwordLabel)}>
                         <span className={styles.span}> Password </span>
-                        <input type='password' name='password' className={styles.input} onChange={(e) => {setPassword(e.target.value)}}></input>
+                        <input type='password' name='password' className={styles.input}></input>
                     </label>
                     <Link to='/login' className={styles.accountAlready}> Already Have an Account? </Link>
                     <button className={styles.signUpButton}> Sign Up </button>
