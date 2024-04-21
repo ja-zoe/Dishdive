@@ -16,7 +16,27 @@ const con = mysql.createConnection(
                 }
             )
 
+app.post('/register', (req,res)=>{
+    const email = req.body.email
+    const username = req.body.username
+    const password = req.body.password
 
+    con.query(
+        'INSERT INTO users (username,email,password) VALUES(?,?,?)',
+        [username,email,password],
+        (err,result)=>{
+            if(err){
+                if(err.code == 'ER_DUP_ENTRY'){
+                    return res.send({message: 'Already a user with this username or email', code: err.code})
+                }else{
+                    return res.send({message: err, code: err.code})
+                }
+            }else{
+                res.send('User Registered!')
+            }
+        }
+    )
+})
 
 
 con.connect((err)=>{
