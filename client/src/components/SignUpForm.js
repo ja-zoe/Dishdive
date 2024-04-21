@@ -2,10 +2,11 @@ import { React, useState } from "react";
 import styles from '../styles/SignUpForm.module.css'
 import classNames from "classnames";
 import { Link } from "react-router-dom";
+import axios from 'axios';
 
 const SignUpForm = () => {
     const [username, setUsername] = useState('')
-    const [email, setEmail] = ''
+    const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
     return (
