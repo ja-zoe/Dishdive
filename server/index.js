@@ -26,13 +26,14 @@ app.post('/register', (req,res)=>{
         [username,email,password],
         (err,result)=>{
             if(err){
+                console.log(err.code)
                 if(err.code == 'ER_DUP_ENTRY'){
                     return res.send({message: 'Already a user with this username or email', code: err.code})
                 }else{
                     return res.send({message: err, code: err.code})
                 }
             }else{
-                res.send('User Registered!')
+                res.send({message:'User Registered!'})
             }
         }
     )
