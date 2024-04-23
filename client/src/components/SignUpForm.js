@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import styles from '../styles/SignUpForm.module.css'
 import classNames from "classnames";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import axios from 'axios';
 
 const SignUpForm = () => {
@@ -13,20 +13,28 @@ const SignUpForm = () => {
     const register = (event) => {
         event.preventDefault()
         if(email.length>0&&password.length>0&&username.length>0){
-            axios.post('http://localhost:3310/register', {
+            axios.post('http://localhost:3310/register', 
+            {
                 username: username,
                 email: email,
                 password: password 
-            }).then((response)=>{
-                    setRegistrationStatus(response.data.message)
+            }
+        ).then( (response)=>{
+                    if(response.data.userRegistered){
+                        window.location.href = '/login'
+                    }else if(response.data.message){
+                        setRegistrationStatus(response.data.message)
+                    }else{
+                        setRegistrationStatus('Error Registering User')
+                    }
                 })
         }else{
             if(username.length==0){
-                setRegistrationStatus('Please enter a username!')
+                setRegistrationStatus('Please Enter A Username!')
             }else if(email.length==0){
-                setRegistrationStatus('Please enter an email!')
+                setRegistrationStatus('Please Enter An Email!')
             }else{
-                setRegistrationStatus('Please enter a password!')
+                setRegistrationStatus('Please Enter A Password!')
             }
         }
     }
