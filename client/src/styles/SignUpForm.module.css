@@ -56,7 +56,7 @@
 }
 
 .input {
-    background-color: black;
+    background-color: rgb(30, 30, 30);
     border: none;
     border-bottom: 1px solid white;
     color: white;
