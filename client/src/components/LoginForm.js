@@ -40,12 +40,12 @@ const login = (event) => {
         <div className={styles.container}>
             <div className={styles.Login}>
 
-                <h1 className={styles.texting}> Welcome Back! </h1>
+                <h1 className={styles.texting}> Log In </h1>
 
                 <form className={styles.form}>
                     <label className={styles.label}>
                         <span className={styles.span}> Username </span>
-                        <input type='email' name='email' className={styles.input} onChange={(e) => {setUsername(e.target.value)}}></input>
+                        <input type='text' name='username' className={styles.input} onChange={(e) => {setUsername(e.target.value)}}></input>
                     </label>
                     <label className={classNames(styles.label, styles.passwordLabel)}>
                         <span className={styles.span}> Password </span>
