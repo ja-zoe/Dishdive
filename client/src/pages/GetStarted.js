@@ -7,9 +7,22 @@ function GetStarted() {
 
     const addIngredient = (e) => {
         e.preventDefault()
-        const newList = [...ingredientsList, ingredient]
+        const newIngredient = {
+            id: Math.floor(Math.random()*1000),
+            value: ingredient
+        }
+
+        const newList = [...ingredientsList, newIngredient]
         setIngredientsList(newList)
     }
+
+    const deleteIngredient = (id) => {
+         const newList = ingredientsList.filter( (ingredient) => {
+            return ingredient.id != id
+         })
+         setIngredientsList(newList)
+    }
+
 
     return (
         <div className={styles.container}>
@@ -23,9 +36,17 @@ function GetStarted() {
             <div className={styles.yourIngredients}>
                 <h1 className={styles.pleaseShare}> Your Ingredients</h1>
                 <div className={styles.ingredientsList}>
-                    <p> 
-                    
-                    </p>
+                    <ul className={styles.list}>
+                        {ingredientsList.map( (ingredient) => {
+                            return (
+                            <li key={ingredient.id} className={styles.ingredient}>
+                                {ingredient.value}
+                                <button onClick={() => deleteIngredient(ingredient.id)}>X</button>
+                            </li>
+                            )
+                        } 
+                        )}
+                    </ul>
                 </div>
             </div>
         </div>
