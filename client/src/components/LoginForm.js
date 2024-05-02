@@ -26,7 +26,7 @@ const login = (event) => {
                 console.log(res.data.err)
                 setLoginStatus('Error Logging in User')
             }else{
-                setLoginStatus('yuh')
+                window.location.href = '/'
             }
 
         })
