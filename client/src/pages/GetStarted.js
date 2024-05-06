@@ -1,5 +1,6 @@
 import { React, useState } from 'react';
 import styles from '../styles/GetStarted.module.css'
+import axios from 'axios';
 
 function GetStarted() {
     const [ingredient, setIngredient] = useState('')
@@ -21,6 +22,11 @@ function GetStarted() {
             return ingredient.id != id
          })
          setIngredientsList(newList)
+    }
+
+    const sendIngredients = async () => {
+        const response = await axios.get('http://localhost:3311/recipes/chicken')
+        console.log(response.data)
     }
 
     console.log(ingredientsList)
@@ -48,6 +54,7 @@ function GetStarted() {
                         )}
                     </ul>
                 </div>
+                <button className={styles.searchButton} onClick={sendIngredients}>Search for Recipes</button>
             </div>
         </div>
     )
