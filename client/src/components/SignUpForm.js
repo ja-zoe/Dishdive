@@ -10,6 +10,7 @@ const SignUpForm = () => {
     const [password, setPassword] = useState('')
     const [registrationStatus, setRegistrationStatus] = useState('')
 
+
     const register = (event) => {
         event.preventDefault()
         if(email.length>0&&password.length>0&&username.length>0){

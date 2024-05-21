@@ -28,7 +28,7 @@
     margin-top: 25%;
     color: white;
     text-align: center;
-    font-family: "Yantramanav", sans-serif;
+    font-family: "Concert One", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -59,6 +59,7 @@
 .ingredientsList {
     width: 100%;
     height: 65%;
+    margin-top: 2%;
 }
 
 .list {
@@ -67,17 +68,39 @@
     display: flex;
     flex-direction: row;
     gap: 2%;
-    word-break: break-all;
-    padding-left: 2%;
-    padding-right: 2%;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .ingredient {
-    border: 1px solid yellow;
-    width: fit-content;
-    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid white;
+    width:;
+    height: 2rem;
     color: white;
     list-style-type: none;
+    border-radius: 30px;
+    background-color: rgb(70, 69, 69);
+}
+
+.ingredientButton {
+    background-color: rgb(70, 69, 69);
+    border: none;
+    color: rgb(255, 0, 0);
+    height: fit-content;
+}
+
+.ingredientButton:hover {
+    cursor: pointer;
+}
+
+.ingredientValue {
+    font-size: 1.5rem;
+    font-family: "Yantramanav", sans-serif;
+    margin-left: 1rem;
 }
 
 .form {
@@ -99,5 +122,48 @@
 
 .enterIngredients:focus {
     outline: none;
+}
+
+.containerTwo {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(29, 30, 30);
+    top: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipesContainer {
+    display: flex;
+    width: 90%;
+    height: 90%;
+    border: 1px solid white;
+    border-radius: 20px;
+    gap: 5%;
+    align-items: center;
+    flex-direction: column;
+}
+
+.yourRecipesText {
+    color: white;
+    font-family: "Concert One", sans-serif;
+    font-size: 3rem;
+    margin-top: 2%;
+}
+
+.recipeImage {
+    border-radius: 7px;
+    width: 150px;
+    height: 150px; 
+}
+
+.recipesList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
